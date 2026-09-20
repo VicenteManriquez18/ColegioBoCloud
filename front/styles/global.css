@@ -1,0 +1,70 @@
+:root {
+  /* Paleta de colores de Otoño */
+  --bs-primary: #d35400;
+  --bs-primary-rgb: 211, 84, 0;
+  --bs-secondary: #8d6e63;
+  --bs-secondary-rgb: 141, 110, 99;
+  --bs-success: #689f38;
+  --bs-success-rgb: 104, 159, 56;
+  --bs-info: #f39c12;
+  --bs-info-rgb: 243, 156, 18;
+  --bs-warning: #e67e22;
+  --bs-warning-rgb: 230, 126, 34;
+  --bs-danger: #c0392b;
+  --bs-danger-rgb: 192, 57, 43;
+  --bs-light: #fdfaf6;
+  --bs-light-rgb: 253, 250, 246;
+  --bs-dark: #3e2723;
+  --bs-dark-rgb: 62, 39, 35;
+  --bs-body-bg: #fffbf5;
+  --bs-body-color: #4e342e;
+  
+  /* Sobreescribir variables específicas de los botones para Bootstrap 5 precompilado */
+  --bs-btn-bg: #d35400;
+  --bs-btn-border-color: #d35400;
+  --bs-btn-hover-bg: #e67e22;
+  --bs-btn-hover-border-color: #e67e22;
+  --bs-btn-active-bg: #a04000;
+  --bs-btn-active-border-color: #a04000;
+}
+
+/* Forzar el color de btn-primary en caso de que las variables no se propaguen */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+}
+.btn-primary:hover {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+.autumn-bg {
+  background: linear-gradient(135deg, rgba(253, 250, 246, 0.9) 0%, rgba(250, 229, 211, 0.9) 100%);
+  min-height: 100vh;
+}
+
+.hero-texture {
+  background-color: var(--bs-primary);
+  background-image: url("data:image/svg+xml,%3Csvg width='500' height='500' viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23ffffff' stroke-opacity='0.15' stroke-width='2'%3E%3Cpath d='M250 500c-138.07 0-250-111.93-250-250S111.93 0 250 0s250 111.93 250 250-111.93 250-250 250zm0-10c132.55 0 240-107.45 240-240S382.55 10 250 10 10 117.45 10 250s107.45 240 240 240zm0-30c116 0 210-94 210-210S366 40 250 40 40 134 40 250s94 210 210 210zm0-30c99.4 0 180-80.6 180-180S349.4 70 250 70 70 150.6 70 250s80.6 180 180 180zm0-30c82.84 0 150-67.16 150-150S332.84 100 250 100 100 167.16 100 250s67.16 150 150 150zm0-30c66.27 0 120-53.73 120-120S316.27 130 250 130 130 183.73 130 250s53.73 120 120 120zm0-30c49.7 0 90-40.3 90-90s-40.3-90-90-90-90 40.3-90 90 40.3 90 90 90zm0-30c33.14 0 60-26.86 60-60s-26.86-60-60-60-60 26.86-60 60 26.86 60 60 60zm0-30c16.57 0 30-13.43 30-30s-13.43-30-30-30-30 13.43-30 30 13.43 30 30 30zm0-30c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+body {
+  margin: 0;
+  background-image: url('../img/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}

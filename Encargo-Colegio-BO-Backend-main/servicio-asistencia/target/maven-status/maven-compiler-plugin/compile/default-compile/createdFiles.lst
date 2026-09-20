@@ -1,0 +1,17 @@
+com\proyecto\ColegioBackend\repository\AsistenciaRepository.class
+com\proyecto\ColegioBackend\model\Asistencia.class
+com\proyecto\ColegioBackend\SecurityConfig.class
+com\proyecto\ColegioBackend\model\event\AsistenciaRegistradaEvent$AsistenciaRegistradaEventBuilder.class
+com\proyecto\ColegioBackend\controller\AsistenciaController$4.class
+com\proyecto\ColegioBackend\services\AsistenciaServiceImpl.class
+com\proyecto\ColegioBackend\AsistenciaApplication.class
+com\proyecto\ColegioBackend\controller\AsistenciaController$3.class
+com\proyecto\ColegioBackend\controller\AsistenciaController.class
+com\proyecto\ColegioBackend\factory\EventFactory.class
+com\proyecto\ColegioBackend\config\WebClientConfig.class
+com\proyecto\ColegioBackend\services\AsistenciaService.class
+com\proyecto\ColegioBackend\controller\AsistenciaController$2.class
+com\proyecto\ColegioBackend\factory\AsistenciaRegistradaEventFactory.class
+com\proyecto\ColegioBackend\model\event\AsistenciaRegistradaEvent.class
+com\proyecto\ColegioBackend\config\RabbitMQConfig.class
+com\proyecto\ColegioBackend\controller\AsistenciaController$1.class

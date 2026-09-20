@@ -1,0 +1,12 @@
+com\proyecto\mensajeria\messaging\MensajeConsumer.class
+com\proyecto\mensajeria\repository\MensajeRepository.class
+com\proyecto\mensajeria\config\WebClientConfig.class
+com\proyecto\mensajeria\controller\MensajeController.class
+com\proyecto\mensajeria\SecurityConfig.class
+com\proyecto\mensajeria\entity\Mensaje.class
+com\proyecto\mensajeria\service\MensajeServiceImpl.class
+com\proyecto\mensajeria\ColegioMensajeriaApplication.class
+com\proyecto\mensajeria\entity\Mensaje$MensajeBuilder.class
+com\proyecto\mensajeria\service\MensajeService.class
+com\proyecto\mensajeria\config\RabbitMQConfig.class
+com\proyecto\mensajeria\exception\UsuarioServicioNoDisponibleException.class

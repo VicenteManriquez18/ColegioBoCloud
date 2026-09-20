@@ -1,0 +1,173 @@
+version: '3.8'
+
+services:
+  # INFRAESTRUCTURA
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    environment:
+      - POSTGRES_PASSWORD=1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init-db:/docker-entrypoint-initdb.d
+    networks:
+      - colegio-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - colegio-network
+
+  # MICROSERVICIOS
+  servicio-usuarios:
+    build: ./servicio-usuarios
+    container_name: servicio-usuarios
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/usuarios_db
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - postgres-db
+      - rabbitmq
+    networks:
+      - colegio-network
+
+  servicio-asistencia:
+    build: ./servicio-asistencia
+    container_name: servicio-asistencia
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/asistencia_db
+      - SERVICIO_USUARIOS_URL=http://servicio-usuarios:8081
+      - SERVICIO_MATRICULA_URL=http://servicio-matricula:8083
+      - SERVICIO_ACADEMICO_URL=http://servicio-academico:8084
+    depends_on:
+      - postgres-db
+    networks:
+      - colegio-network
+
+  servicio-matricula:
+    build: ./servicio-matricula
+    container_name: servicio-matricula
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/matricula_db
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SERVICIO_USUARIOS_URL=http://servicio-usuarios:8081
+      - SERVICIO_ACADEMICO_URL=http://servicio-academico:8084
+    depends_on:
+      - postgres-db
+      - rabbitmq
+    networks:
+      - colegio-network
+
+  servicio-academico:
+    build: ./servicio-academico
+    container_name: servicio-academico
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/academico_db
+    depends_on:
+      - postgres-db
+    networks:
+      - colegio-network
+
+  servicio-reportes:
+    build: ./servicio-reportes
+    container_name: servicio-reportes
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/reportes_db
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SERVICIO_ACADEMICO_URL=http://servicio-academico:8084
+      - SERVICIO_ASISTENCIA_URL=http://servicio-asistencia:8082
+      - SERVICIO_MATRICULA_URL=http://servicio-matricula:8083
+    depends_on:
+      - postgres-db
+      - rabbitmq
+    networks:
+      - colegio-network
+
+  servicio-mensajeria:
+    build: ./servicio-mensajeria
+    container_name: servicio-mensajeria
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/mensajeria_db
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SERVICIO_USUARIOS_URL=http://servicio-usuarios:8081
+    depends_on:
+      - postgres-db
+      - rabbitmq
+    networks:
+      - colegio-network
+
+  apigateway:
+    build: ./apigateway
+    container_name: apigateway
+    ports:
+      - "9090:9090"
+    environment:
+      - SERVICIO_USUARIOS_URL=http://servicio-usuarios:8081
+      - SERVICIO_ASISTENCIA_URL=http://servicio-asistencia:8082
+      - SERVICIO_MATRICULA_URL=http://servicio-matricula:8083
+      - SERVICIO_ACADEMICO_URL=http://servicio-academico:8084
+      - SERVICIO_REPORTES_URL=http://servicio-reportes:8085
+      - SERVICIO_MENSAJERIA_URL=http://servicio-mensajeria:8086
+    depends_on:
+      - servicio-usuarios
+      - servicio-asistencia
+      - servicio-matricula
+      - servicio-academico
+      - servicio-reportes
+      - servicio-mensajeria
+    networks:
+      - colegio-network
+
+  frontend:
+    build: ../front
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - apigateway
+    networks:
+      - colegio-network
+
+  # CALIDAD DE CÓDIGO
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    networks:
+      - colegio-network
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonar
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar
+
+  sonar-db:
+    image: postgres:15-alpine
+    container_name: sonar-db
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonar
+    networks:
+      - colegio-network
+
+networks:
+  colegio-network:
+    driver: bridge

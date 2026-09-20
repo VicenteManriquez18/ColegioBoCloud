@@ -1,0 +1,11 @@
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\SecurityConfig.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\ColegioMensajeriaApplication.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\messaging\MensajeConsumer.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\repository\MensajeRepository.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\entity\Mensaje.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\exception\UsuarioServicioNoDisponibleException.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\config\WebClientConfig.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\service\MensajeServiceImpl.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\config\RabbitMQConfig.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\controller\MensajeController.java
+C:\Users\vicho\Downloads\aaaa\Encargo-Colegio-BO-Backend-main\servicio-mensajeria\src\main\java\com\proyecto\mensajeria\service\MensajeService.java

@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "7fa72cf1-654d-4c3c-8b83-2070e6ea1b94",
+		"name": "Colegio - Crear Cursos (1 Basico a 4 Medio)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Crear Primero Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Primero Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Crear Segundo Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Segundo Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Crear Tercero Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Tercero Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Crear Cuarto Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Cuarto Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Crear Quinto Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Quinto Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Crear Sexto Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Sexto Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Crear Séptimo Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Séptimo Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Crear Octavo Básico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Octavo Básico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Crear Primero Medio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Primero Medio\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10. Crear Segundo Medio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Segundo Medio\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11. Crear Tercero Medio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Tercero Medio\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12. Crear Cuarto Medio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Cuarto Medio\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/academico/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"academico",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

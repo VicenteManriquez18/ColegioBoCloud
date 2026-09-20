@@ -1,0 +1,111 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AsistenciaApplication",
+            "request": "launch",
+            "mainClass": "main.java.com.proyecto.ColegioBackend.AsistenciaApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ApigatewayApplication",
+            "request": "launch",
+            "mainClass": "com.colegio.apigateway.ApigatewayApplication",
+            "projectName": "apigateway",
+            "vmArgs": " -Dcom.sun.management.jmxremote"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ColegipoApplication<colegipo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.colegipo.ColegipoApplication",
+            "projectName": "colegipo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ColegioApplication<colegipo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.ColegioApplication",
+            "projectName": "colegipo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54252 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=colegipo"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AsistenciaApplication<servicio-asistencia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.AsistenciaApplication",
+            "projectName": "servicio-asistencia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62964 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=servicio-asistencia"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicioMatriculaApplication<servicio-matricula>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.ServicioMatriculaApplication",
+            "projectName": "servicio-matricula",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApigatewayApplication<com.colegio-apigateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.colegio.apigateway.ApigatewayApplication",
+            "projectName": "com.colegio-apigateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicioMatriculaApplication<com.example-servicio-matricula>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.ServicioMatriculaApplication",
+            "projectName": "com.example-servicio-matricula",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ColegioApplication<com.proyecto-colegipo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.ColegioApplication",
+            "projectName": "com.proyecto-colegipo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AsistenciaApplication<com.proyecto-servicio-asistencia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.AsistenciaApplication",
+            "projectName": "com.proyecto-servicio-asistencia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ColegioAcademicoApplication<servicio-academico>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.ColegioBackend.ColegioAcademicoApplication",
+            "projectName": "servicio-academico",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
